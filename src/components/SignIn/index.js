@@ -6,18 +6,29 @@ import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
-import * as COMPONENTS from '../../components-visual';
+import { withTheme } from '../../components-visual/theme';
+import { FormField, Label } from '../../components-visual/form-field';
+import { Card,Pane } from '../../components-visual';
+import { boxShadow } from 'ui-box';
 
-const SignInPage = () => (
+
+
+const SignInPage = ({isRequired}) => (
+  <withTheme>
   <div>
-    <h1>SignIn</h1>
+    <Pane>
+    <Card>
+    <h1 > Sign In </h1>
     <SignInForm />
-    <SignInGoogle />
+    <SignInGoogle  />
     <SignInFacebook />
     <SignInTwitter />
     <PasswordForgetLink />
     <SignUpLink />
+    </Card>
+    </Pane>
   </div>
+  </withTheme>
 );
 
 const INITIAL_STATE = {
