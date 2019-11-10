@@ -28,6 +28,7 @@
     "react-transition-group": "^2.5.0",
     "recompose": "^0.30.0",
     "redux": "^4.0.4",
+    "styled-components": "^5.0.0-rc.1",
     "tinycolor2": "^1.4.1",
     "tslint": "^5.20.1",
     "typescript": "^3.7.2",

@@ -1,21 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-
+import { ThemeProvider, ThemeContext, defaultTheme, theme } from './components-visual/theme/'
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-
 import store from './store';
 import App from './components/App';
 import Firebase, { FirebaseContext } from './components/Firebase';
 
 
 ReactDOM.render(
+  
+  <ThemeProvider>
   <Provider store={store}>
     <FirebaseContext.Provider value={new Firebase()}>
-      <App />
-    </FirebaseContext.Provider>
-  </Provider>,
+        <App />
+    </FirebaseContext.Provider> 
+  </Provider>
+  </ThemeProvider>
+  ,
   document.getElementById('root'),
 );
 
